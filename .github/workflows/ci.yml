@@ -12,5 +12,9 @@ jobs:
     - run: |
        echo "hello-chaitu"
        echo "hello-chaitu123"
+  Printing-Env:
+     runs-on:  self-hosted 
+     steps:
+     - run: sh "env"
     
     
