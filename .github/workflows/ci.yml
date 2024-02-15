@@ -11,8 +11,10 @@ jobs:
     - name: runnin-test
       run: echo "doing test-cases"
     - name: checking-os version
+      env: 
+        name: "chaithanya"
       run: |
        cat /etc/os-release*
-  
+      if: ${{ name }} == "chaithanya" 
     
     
