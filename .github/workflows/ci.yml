@@ -4,7 +4,7 @@ on: [push]
 jobs:
   Explore-GitHub-Actions:
     runs-on: ubuntu-20.04
-    jobs:
+    steps:
     - name: git clone
       run: echo "clonign repo"
     - name: runnin-test
