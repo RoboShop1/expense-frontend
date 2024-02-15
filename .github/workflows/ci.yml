@@ -5,6 +5,7 @@ on:
   - cron: "1 * * * *"
 jobs:
   Explore-GitHub-Actions:
+    name: Hello-Explore-GitHub-Actions-Geetha
     runs-on: ubuntu-20.04
     steps:
     - name: git clone
