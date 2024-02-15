@@ -5,9 +5,12 @@ jobs:
   Explore-GitHub-Actions:
     name: Hello-Explore-GitHub-Actions-Geetha
     runs-on: ubuntu-20.04
+    env:
+      Name: "Geetha"
     steps:
     - name: git clone
       run: echo "clonign repo"
+      if: ${{ env.Name == 'Geetha' }}
     - name: runnin-test
       run: echo "doing test-cases"
     - name: checking-os version
@@ -15,6 +18,6 @@ jobs:
         name: "chaithanya"
       run: |
        cat /etc/os-release*
-      if: ${{ env.name == 'geetha' }}  
+      if: ${{ env.Name == 'Geetha' }}  
     
     
