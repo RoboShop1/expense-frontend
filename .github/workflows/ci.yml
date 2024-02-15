@@ -6,4 +6,11 @@ jobs:
     runs-on: self-hosted
     steps:
     - run: echo "heelo-chaitu"
+  Explore-GitHub-Actions1:
+    runs-on: self-hosted
+    steps:
+    - run: |
+       echo "hello-chaitu"
+       echo "hello-chaitu123"
+    
     
