@@ -15,6 +15,6 @@ jobs:
         name: "chaithanya"
       run: |
        cat /etc/os-release*
-      if: ${{ env.name }}  == "geetha" 
+      if: ${{ env.name == 'geetha' }}  
     
     
