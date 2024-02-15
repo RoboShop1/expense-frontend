@@ -9,6 +9,9 @@ jobs:
       run: echo "clonign repo"
     - name: runnin-test
       run: echo "doing test-cases"
+    - name: checking-os version
+      run: |
+       cat /etc/os-release*
   
     
     
