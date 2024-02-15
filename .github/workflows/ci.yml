@@ -10,7 +10,7 @@ jobs:
       run: echo "clonign repo"
       env:
        name: "chai"
-      if: ${{ env.name == 'chai' }} 
+      if: ${{ env.name == 'chaii' }} 
     - name: runnin-test
       run: echo "doing test-cases"
     - name: checking-os version
@@ -18,6 +18,6 @@ jobs:
        cat /etc/os-release* 
       env:
        name: "chai"
-      if: ${{ env.name == 'chai' }}  
+      if: ${{ env.name == 'chaii' }}  
     
     
