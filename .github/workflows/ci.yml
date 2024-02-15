@@ -15,6 +15,6 @@ jobs:
   Printing-Env:
      runs-on:  self-hosted 
      steps:
-     - run: sh "env"
+     - run: env
     
     
