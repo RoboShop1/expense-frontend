@@ -9,3 +9,4 @@ jobs:
      - name: Printing
        run: echo "This is MY_NAME_IS - ${{ vars.MY_NAME_IS }}"
     
+#
