@@ -6,10 +6,12 @@ jobs:
     name: Hello-Explore-GitHub-Actions-Geetha
     runs-on: self-hosted
     environment: Project1
+    timeout-minutes: 1
     steps:
      - name: sleeping
-       run: sleep 10s
-       timeout-minutes: 1
-     - run: echo "This is second -step"  
+       run: sleep 30s
+     - run: echo "This is second stage"  
+     - run: sleep 30s
+     
     
 
