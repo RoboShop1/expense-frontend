@@ -4,20 +4,8 @@ on: [push]
 jobs:
   Explore-GitHub-Actions:
     name: Hello-Explore-GitHub-Actions-Geetha
-    runs-on: ubuntu-20.04
+    runs-on: self-hosted
     steps:
-    - name: git clone
-      run: echo "clonign repo"
-      env:
-       name: "chai"
-      if: ${{ env.name == 'chaii' }} 
-    - name: runnin-test
-      run: echo "doing test-cases"
-    - name: checking-os version
-      run: |
-       cat /etc/os-release* 
-      env:
-       name: "chai"
-      if: ${{ env.name == 'chaii' }}  
-    
+     - name: Printing
+       run: echo "This is MY_NAME_IS - ${{ vars.MY_NAME_IS }}"
     
