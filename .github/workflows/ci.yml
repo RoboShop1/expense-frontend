@@ -1,17 +1,25 @@
-name: GitHub Actions Demo
-run-name: ${{ github.actor }} is testing out GitHub Actions 🚀
+name: This is Git-Hub actions
 on: [push]
 jobs:
-  Explore-GitHub-Actions:
-    name: Hello-Explore-GitHub-Actions-Geetha
+  job1:
+    name: This is job1
     runs-on: self-hosted
-    environment: Project1
-    timeout-minutes: 1
+    outputs:
+      step1output: ${{ steps.step1.outputs.job_step1_output }}
     steps:
-     - name: sleeping
-       run: sleep 30s
-     - run: echo "This is second stage"  
-     - run: sleep 30s
+      - name: step1
+        id: step1
+        run: echo "job_step1_output=chaitustep1" >> $GITHUB_OUTPUT
+      - name: step2
+        run: echo "This is job1step1- ${{ steps.step1.outputs.job_step1_output }}" 
+  job2:
+    name: This is job2
+    runs-on: self-hosted
+    steps:
+     - run: echo "THis is from job2 ${{ needs.job1.outputs.step1output }}"
+
      
+        
+
     
 
