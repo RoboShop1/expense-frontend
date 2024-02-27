@@ -14,9 +14,10 @@ jobs:
         run: echo "This is job1step1- ${{ steps.step1.outputs.job_step1_output }}" 
   job2:
     name: This is job2
+    needs: [job1]
     runs-on: self-hosted
     steps:
-     - run: echo ${{ needs.job1.outputs.output1 }}"
+     - run: echo "This is ${{ needs.job1.outputs.output1 }}"
 
      
         
