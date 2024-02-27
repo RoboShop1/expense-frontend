@@ -27,7 +27,7 @@ jobs:
              > [!CAUTION]
              > Advises about risks or negative outcomes of certain actions." >> $GITHUB_STEP_SUMMARY
   job2:
-    runs-on: self-hsoted
+    runs-on: self-hosted
     steps:
       - name: step1
         run: echo " 
