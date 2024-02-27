@@ -5,7 +5,7 @@ jobs:
     name: This is job1
     runs-on: self-hosted
     outputs:
-      step1output: ${{ steps.step1.outputs.job_step1_output }}
+      output1: ${{ steps.step1.outputs.job_step1_output }}
     steps:
       - name: step1
         id: step1
@@ -16,7 +16,7 @@ jobs:
     name: This is job2
     runs-on: self-hosted
     steps:
-     - run: echo "THis is from job2 ${{ needs.job1.outputs.step1output }}"
+     - run: echo ${{ needs.job1.outputs.output1 }}"
 
      
         
