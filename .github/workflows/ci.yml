@@ -11,16 +11,24 @@ jobs:
         id: step1
         run: echo "job_step1_output=chaitustep1" >> $GITHUB_OUTPUT
       - name: step2
-        run: echo "This is job1step1- ${{ steps.step1.outputs.job_step1_output }}" 
-  job2:
-    name: This is job2
-    needs: [job1]
-    runs-on: self-hosted
-    steps:
-     - run: echo "This is ${{ needs.job1.outputs.output1 }}"
+        run: echo "
+             > [!NOTE]
+             > Useful information that users should know, even when skimming content.
 
-     
-        
+             > [!TIP] 
+             > Helpful advice for doing things better or more easily.
+
+             > [!IMPORTANT]
+             > Key information users need to know to achieve their goal.
+
+             > [!WARNING]
+             > Urgent info that needs immediate user attention to avoid problems.
+
+             > [!CAUTION]
+             > Advises about risks or negative outcomes of certain actions." >> $GITHUB_STEP_SUMMARY
+
+
+
 
     
 
